@@ -1,6 +1,10 @@
+
+"use client"
+import { useSession, signOut} from 'next-auth/react';
 import Link from 'next/link';
 
 const Navbar = () => {
+  const { data: session, status } = useSession();
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-6xl mx-auto px-4">
@@ -26,6 +30,15 @@ const Navbar = () => {
             <Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">
               Contact
             </Link>
+           { !session && <Link href="/login" className="text-gray-600 hover:text-gray-900 transition-colors">
+              Login
+            </Link>}
+           { session && 
+            <button className='text-black'>My Account</button>}
+          
+           { session && 
+            <button onClick={() => signOut()} className='text-red-600'>logout</button>}
+          
           </div>
         </div>
       </div>
