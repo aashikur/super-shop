@@ -1,3 +1,4 @@
+import Navbar from "@/app/components/navbar";
 import Image from "next/image";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
             priority
           />
         </div>
+        <Navbar/>
         <div className="container mx-auto px-4 h-full flex items-center">
           <div className="max-w-2xl text-white">
             <h1 className="text-5xl font-bold mb-4">Welcome to SuperShop</h1>
@@ -109,6 +111,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
     </div>
   );
 }

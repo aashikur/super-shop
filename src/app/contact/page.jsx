@@ -1,9 +1,10 @@
 import React from 'react';
+import Newsletter from '../components/shared/Newslater';
 
 const ContactPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Contact Us</h1>
@@ -99,7 +100,14 @@ const ContactPage = () => {
             </form>
           </div>
         </div>
+
+
       </div>
+
+      {/* Newslater  */}
+     <div className='py-12 mt-12'>
+       <Newsletter />
+     </div>
     </div>
   );
 };

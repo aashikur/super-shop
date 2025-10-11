@@ -1,7 +1,14 @@
 {
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./src/*"]
+    "compilerOptions": {
+        "baseUrl": "src",
+        "paths": {
+            "@/*": ["*"]
+        }
     }
-  }
 }
+
+
+
+// "typescript.preferences.importModuleSpecifier": "non-relative",
+// "javascript.preferences.importModuleSpecifier": "non-relative",
+
