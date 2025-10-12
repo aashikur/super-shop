@@ -18,7 +18,7 @@ const Newsletter = () => {
                     {/* Content */}
                     <div className="relative">
                         <div className="text-center max-w-2xl mx-auto mb-8">
-                            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                            <h2 className="text-3xl font-bold text-blue-900 mb-4">
                                 Subscribe to Our Newsletter
                             </h2>
                             <p className="text-gray-600">
@@ -32,12 +32,14 @@ const Newsletter = () => {
                                 <input
                                     type="email"
                                     placeholder="Enter your email"
-                                    className="flex-1 px-4 py-3 rounded-full border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="flex-1 px-4 py-3 
+                                    placeholder:text-blue-300
+                                    rounded-full text-blue-500 border-2 border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 />
                                 <Button text={'Subscribe'}
                                     type='outline'
 
-                                    className=" border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-600 items-center py-3"
+                                    className=" border bg-blue-500 border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white  items-center py-3"
                                 >
 
                                 </Button>

@@ -64,9 +64,9 @@ const PopularProducts = ({ text = 'Popular Products', viewAll = true , limits = 
             </div>
 
             {viewAll && <div className='flex justify-center mt-8'>
-                <button className='border border-gray-300 px-4 py-1  rounded text-gray-500'>
+                <Link href="/products"  className='border border-gray-300 px-4 py-1  rounded-full text-gray-500'>
                     View All
-                </button>
+                </Link>
             </div>}
         </Container>
     );

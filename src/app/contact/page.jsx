@@ -73,7 +73,7 @@ const ContactPage = () => {
                                 </label>
                                 <input
                                     type="text"
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all"
+                                    className="w-full px-4 py-3 rounded-full border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all"
                                     placeholder="John"
                                 />
                             </div>
@@ -83,7 +83,7 @@ const ContactPage = () => {
                                 </label>
                                 <input
                                     type="text"
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all"
+                                    className="w-full px-4 py-3 rounded-full border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all"
                                     placeholder="Doe"
                                 />
                             </div>
@@ -95,7 +95,7 @@ const ContactPage = () => {
                             </label>
                             <input
                                 type="email"
-                                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all"
+                                className="w-full px-4 py-3 rounded-full border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all"
                                 placeholder="john@example.com"
                             />
                         </div>
@@ -106,14 +106,14 @@ const ContactPage = () => {
                             </label>
                             <textarea
                                 rows="5"
-                                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all resize-none"
+                                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all resize-none"
                                 placeholder="Your message here..."
                             ></textarea>
                         </div>
 
                         <button
                             type="submit"
-                            className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                            className="w-full bg-blue-600 text-white py-3 px-6 rounded-full font-medium hover:bg-blue-700 transition-colors"
                         >
                             Send Message
                         </button>
