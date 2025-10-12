@@ -14,7 +14,7 @@ const Newsletter = () => {
                             backgroundSize: '40px 40px'
                         }}></div>
                     </div>
-                    
+
                     {/* Content */}
                     <div className="relative">
                         <div className="text-center max-w-2xl mx-auto mb-8">
@@ -34,8 +34,8 @@ const Newsletter = () => {
                                     placeholder="Enter your email"
                                     className="flex-1 px-4 py-3 rounded-full border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                 />
-                                <Button text={'Subscribe'} 
-                            type='outline'
+                                <Button text={'Subscribe'}
+                                    type='outline'
 
                                     className=" border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-600 items-center py-3"
                                 >
