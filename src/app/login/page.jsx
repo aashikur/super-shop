@@ -1,8 +1,9 @@
+"use client"
 import Container from '@/app/components/Container';
 import React from 'react';
 import Link from 'next/link';
-import { FaGoogle } from 'react-icons/fa';
 import AuthButton from '@/app/components/AuthButton';
+import axios from 'axios';
 
 const LoginPage = () => {
     const benefits = [
@@ -23,6 +24,25 @@ const LoginPage = () => {
             description: "Earn points with every purchase and get special rewards"
         }
     ];
+
+
+    const [email, setEmail] = React.useState('');
+    const [password, setPassword] = React.useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Submitted");
+
+        const user = { email, password };
+
+        try {
+                const response = axios.post('/api/users', user);
+        } catch (e) {
+            console.log(e);
+        }
+
+    }
+
 
     return (
         <Container>
@@ -46,13 +66,15 @@ const LoginPage = () => {
                                 </div>
 
                                 {/* Login Form */}
-                                <form className="space-y-6">
+                                <form onSubmit={handleSubmit} className="space-y-6">
                                     <div>
                                         <label className="block text-sm font-medium text-gray-700 mb-2">
                                             Email
                                         </label>
                                         <input
                                             type="email"
+                                            value={email} 
+                                            onChange={e => setEmail(e.target.value)}
                                             className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                                             placeholder="Enter your email"
                                         />
@@ -63,6 +85,8 @@ const LoginPage = () => {
                                         </label>
                                         <input
                                             type="password"
+                                            value={password}
+                                            onChange={e => setPassword(e.target.value)}
                                             className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                                             placeholder="Enter your password"
                                         />
