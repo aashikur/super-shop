@@ -36,8 +36,8 @@ const LoginPage = () => {
         const user = { email, password };
 
         try {
-                const response = axios.post('/api/users', user);
-                console.log(response);
+            const response = axios.post('/api/users', user);
+            console.log(response);
         } catch (e) {
             console.log(e);
         }
@@ -74,7 +74,7 @@ const LoginPage = () => {
                                         </label>
                                         <input
                                             type="email"
-                                            value={email} 
+                                            value={email}
                                             onChange={e => setEmail(e.target.value)}
                                             className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                                             placeholder="Enter your email"

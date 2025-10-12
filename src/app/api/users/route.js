@@ -19,3 +19,20 @@ export async function POST(request){
 
 
 // Case Study - Success 
+/*
+
+1. grab data and sent via axios post request 
+    ( const response = axios.post('/api/users', user);)
+2. connect mongoDB in dbConfig.js 
+3. create new route in api/users/route.js
+4. sent data to db
+
+
+
+
+
+
+
+
+
+*/
