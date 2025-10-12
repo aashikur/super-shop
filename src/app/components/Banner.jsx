@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Button from '../ui/Button';
+import Hero_banner from '@/assets/banner.jpg';
 
 const Banner = () => {
     return (
@@ -8,7 +9,7 @@ const Banner = () => {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0">
                 <Image 
-                    src="/assets/banner.jpg" 
+                    src={Hero_banner} 
                     alt="Banner"
                     width="1920"
                     height="1080"
