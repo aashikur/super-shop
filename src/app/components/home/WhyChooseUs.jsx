@@ -2,6 +2,7 @@ import Container from '@/app/components/Container';
 import { FaShippingFast, FaHeadset, FaUndoAlt, FaShieldAlt } from 'react-icons/fa';
 
 const WhyChooseUs = () => {
+  
     const features = [
         {
             title: "Free & Fast Shipping",
