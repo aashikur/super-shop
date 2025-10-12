@@ -1,5 +1,6 @@
 "use client"
 
+import Container from '@/app/components/Container';
 import { productsDummyData } from '@/lib/assets';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,7 +15,7 @@ const PopularProducts = ({ text = 'Popular Products', viewAll = true , limits = 
     
     const display = limits ? productsDummyData.slice(0, limits) : productsDummyData;
     return (
-        <section className=' py-14'>
+        <Container className=' py-14'>
             <h1 className='text-2xl font-bold'>
                 {text}
             </h1>
@@ -67,7 +68,7 @@ const PopularProducts = ({ text = 'Popular Products', viewAll = true , limits = 
                     View All
                 </button>
             </div>}
-        </section>
+        </Container>
     );
 };
 

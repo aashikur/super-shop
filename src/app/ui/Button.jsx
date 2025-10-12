@@ -5,14 +5,14 @@ import { IoArrowForward } from "react-icons/io5";
 const Button = ({ text, type = 'primary', className = '', arrow = false }) => {
   // Base styles for all buttons
   const base =
-    'px-4 md:px-8 py-2 rounded-full inline-block text-sm md:text-base font-medium cursor-pointer transition-all duration-200 group';
+    'px-4 md:px-8 py-2 flex items-center justify-center rounded-full inline-block text-sm md:text-base font-medium cursor-pointer transition-all duration-200 group';
 
   // Conditional styling based on type
   const buttonClass =
     type === 'primary'
       ? 'bg-white  text-black'
       : type === 'outline'
-      ? 'border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white'
+      ? 'border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white duration-200  '
       : type === 'ghost'
       ? 'text-white'
       : 'bg-gray-300 hover:bg-gray-400 text-gray-800';

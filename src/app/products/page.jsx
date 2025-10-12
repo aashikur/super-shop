@@ -4,9 +4,7 @@ import Container from '../components/Container';
 
 const page = () => {
     return (
-        <Container>
             <PopularProducts text="All Products" viewAll={false}/>
-        </Container>
     );
 };
 
