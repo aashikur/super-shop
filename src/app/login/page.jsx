@@ -37,6 +37,7 @@ const LoginPage = () => {
 
         try {
                 const response = axios.post('/api/users', user);
+                console.log(response);
         } catch (e) {
             console.log(e);
         }
