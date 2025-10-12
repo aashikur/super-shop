@@ -1,6 +1,7 @@
 import Container from '@/app/components/Container';
 import PopularProducts from '@/app/components/home/PopularProducts';
-import { productsDummyData } from '@/public/assets/assets';
+import { productsDummyData } from '@/lib/assets';
+
 import Image from 'next/image';
 import React from 'react';
 import { FaShoppingCart, FaHeart } from 'react-icons/fa';
