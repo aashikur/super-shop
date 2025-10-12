@@ -1,32 +1,11 @@
+import Banner from "@/app/components/Banner";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Banner Section */}
-      <section className="relative h-[600px] bg-gray-100">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30">
-          <Image
-            src="/banner.jpg" // Add your banner image
-            alt="Banner"
-            fill
-            className="object-cover -z-10"
-            priority
-          />
-        </div>
-
-        <div className="container mx-auto px-4 h-full flex items-center">
-          <div className="max-w-2xl text-white">
-            <h1 className="text-5xl font-bold mb-4">Welcome to SuperShop</h1>
-            <p className="text-xl mb-8">
-              Discover amazing products at unbeatable prices
-            </p>
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition-colors">
-              Shop Now
-            </button>
-          </div>
-        </div>
-      </section>
+      <Banner/>
 
       {/* Services Section */}
       <section className="py-16 bg-white">
