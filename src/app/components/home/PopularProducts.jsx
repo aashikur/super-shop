@@ -1,11 +1,11 @@
 "use client"
 
+import { productsDummyData } from '@/lib/assets';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { IoMdStar } from "react-icons/io";
 import { IoBookmark, IoBookmarkOutline } from 'react-icons/io5';
-import { productsDummyData } from '../../../../public/assets/assets';
 
 
 const PopularProducts = ({ text = 'Popular Products', viewAll = true , limits = "" }) => {
