@@ -40,7 +40,7 @@ const Navbar = () => {
 
                 <div className='flex items-center gap-2' >
                     <IoMenu onClick={() => setDrop3(!Drop3)} className='text-xl block sm:hidden' />
-                    <Link href="/" className='font-bold text-xl'>E-Shop</Link>
+                    <Link href="/" className='font-bold text-xl'>S.Shop</Link>
                 </div>
 
                 {/* Mobile SideBar Menu  */}
