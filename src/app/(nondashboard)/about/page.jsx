@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '../components/Container';
+import Container from '../../components/Container';
 import Image from 'next/image';
 import { FaShoppingBag, FaUsers, FaGlobe, FaAward } from 'react-icons/fa';
 import { assets } from '@/lib/assets';

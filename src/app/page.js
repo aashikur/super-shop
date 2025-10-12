@@ -3,7 +3,7 @@ import Newsletter from "@/app/components/home/Newsletter";
 import PopularProducts from "@/app/components/home/PopularProducts";
 import WhyChooseUs from "@/app/components/home/WhyChooseUs";
 import OurValues from "@/app/components/shared/OurValues";
-import ContactPage from "@/app/contact/page";
+import ContactPage from "@/app/(nondashboard)/contact/page";
 import Image from "next/image";
 
 export default function Home() {

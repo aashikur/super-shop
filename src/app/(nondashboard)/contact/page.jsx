@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '../components/Container';
+import Container from '../../components/Container';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 
 const ContactPage = () => {
