@@ -27,7 +27,7 @@ const PopularProducts = ({ text = 'Popular Products', viewAll = true , limits = 
                             className='flex flex-col max-w-[200px] w-full  relative cursor-pointer'
                             key={product._id}>
 
-                            <span onClick={() => { setIsBooked(isBooked) }} className='absolute top-2 right-2 text-sm text-orange-500 z-10 border border-orange-300 p-1 rounded-full'>
+                            <span onClick={() => { setIsBooked(isBooked) }} className='absolute top-2 right-2 text-sm text-blue-500 z-10 border border-blue-300 p-1 rounded-full'>
                                 {isBooked ? <IoBookmark /> : <IoBookmarkOutline />}
 
 
@@ -42,7 +42,7 @@ const PopularProducts = ({ text = 'Popular Products', viewAll = true , limits = 
                                 <p className='text-sm text-gray-500 truncate'>{product.description}</p>
                                 <div className='flex justify-between items-center'>
                                     <p>4.5</p>
-                                    <p className='flex text-orange-600'>
+                                    <p className='flex text-blue-600'>
                                         <IoMdStar />
                                         <IoMdStar />
                                         <IoMdStar />
