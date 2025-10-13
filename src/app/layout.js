@@ -5,6 +5,9 @@ import Footer from "./components/Footer";
 import SessionWrapper from "@/app/SessionWrapper";
 import Navbar from "@/app/components/navbar/Navbar";
 
+import Image from "next/image";
+import { assets } from "@/lib/assets";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,6 +21,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "S-Shop | All You Need In One Place",
   description: "All You Need In One Place",
+
 };
 
 export default function RootLayout({ children }) {
@@ -27,9 +31,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
 
+
         <SessionWrapper>
           <Navbar />
-
           {children}
           <Footer />
 
