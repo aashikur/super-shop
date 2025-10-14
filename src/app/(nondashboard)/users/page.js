@@ -4,20 +4,15 @@ import axios from 'axios';
 import { useSession } from 'next-auth/react';
 import React, { useEffect, useState } from 'react';
 
-// 🔹 FIXED: Capitalized component name
-const Page = () => {  
+const GetUsers = () => {  
   const [allUsers, setAllUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   
-  // 🔹 FIXED: Removed unused variable 'status'
   const { data: session } = useSession();  
-
-  console.log("🙄 : ", allUsers);
 
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        // 🔹 FIXED: Added 'await'
         const res = await axios.get('/api/get-users');
         setAllUsers(res.data);
       } catch (error) {
@@ -29,12 +24,82 @@ const Page = () => {
     fetchUsers();
   }, []);
 
+  if (loading) {
+    return (
+      <Container>
+        <div className="min-h-[60vh] flex items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+        </div>
+      </Container>
+    );
+  }
+
   return (
-    <Container>
-      users : {allUsers.length}
+    <Container className='min-h-[60vh]'>
+      <div className="py-8">
+        <h2 className="text-2xl font-semibold mb-6">Connect With Merchant ({allUsers.length})</h2>
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white rounded-lg overflow-hidden">
+            <thead className="bg-gray-50">
+              <tr>
+                <th className="px-6 py-4 text-left text-sm font-medium text-gray-600">User</th>
+                <th className="px-6 py-4 text-left text-sm font-medium text-gray-600">Contact</th>
+                <th className="px-6 py-4 text-left text-sm font-medium text-gray-600">Role</th>
+                <th className="px-6 py-4 text-left text-sm font-medium text-gray-600">Status</th>
+                <th className="px-6 py-4 text-left text-sm font-medium text-gray-600">Joined</th>
+                <th className="px-6 py-4 text-left text-sm font-medium text-gray-600">Login Count</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              {allUsers.map((user) => (
+                <tr key={user._id} className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-4">
+                    <div className="flex items-center gap-3">
+                      <img 
+                        src={user.photoURL} 
+                        alt={user.name}
+                        className="h-10 w-10 rounded-full object-cover"
+                      />
+                      <div>
+                        <div className="font-medium text-gray-900">{user.name}</div>
+                        <div className="text-sm text-gray-500">{user.address}</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4">
+                    <div className="text-sm">
+                      <div className="text-gray-900">{user.email}</div>
+                      <div className="text-gray-500">{user.phone}</div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4">
+                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium capitalize
+                      ${user.role === 'merchant' ? 'bg-purple-100 text-purple-800' : 'bg-gray-100 text-gray-800'}`}>
+                      {user.role}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4">
+                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium capitalize
+                      ${user.status === 'pending' ? 'bg-yellow-100 text-yellow-800' : 
+                        user.status === 'active' ? 'bg-green-100 text-green-800' : 
+                        'bg-red-100 text-red-800'}`}>
+                      {user.status}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 text-sm text-gray-500">
+                    {new Date(user.createdAt).toLocaleDateString()}
+                  </td>
+                  <td className="px-6 py-4 text-sm text-gray-500">
+                    {user.loginCount}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </Container>
   );
 };
 
-// 🔹 FIXED: Updated export to match capitalized name
-export default Page;
+export default GetUsers;
