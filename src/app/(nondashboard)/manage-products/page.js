@@ -50,10 +50,18 @@ const ManageProducts = () => {
     }
   };
 
-  if (loading) {
+  if (!loading) {
     return (
-      <Container className="p-8 text-center">
-        <p className="text-gray-500 animate-pulse">Loading products...</p>
+      <Container className="p-4 min-h-[60vh]">
+        <h2 className="text-2xl font-semibold mb-6">Manage Products</h2>
+        {[...Array(3)].map((_, index) => (
+          <div key={index} className="skeleton mb-5  animate-pulse border min-h-60 border-gray-300 rounded-lg p-8 flex flex-col sm:flex-row  items-center justify-between shadow-sm hover:shadow-md transition" >
+            <p className="text-gray-500">Loading products...</p>
+          </div>
+        ))
+        }
+
+
       </Container>
     );
   }
@@ -61,6 +69,7 @@ const ManageProducts = () => {
   return (
     <Container className="p-4">
       <h2 className="text-2xl font-semibold mb-6">Manage Products</h2>
+
 
       {products.length === 0 ? (
         <p className="text-gray-500">No products found.</p>
@@ -72,8 +81,11 @@ const ManageProducts = () => {
               className="border border-gray-300 rounded-lg p-4 flex flex-col sm:flex-row  items-center justify-between shadow-sm hover:shadow-md transition"
             >
               {/* Product image */}
-              <img
-              
+              <Image
+                unoptimized
+                width={200}
+                height={200}
+
                 src={p.image?.[0]}
                 alt={p.name}
                 className="w-full h-[200px] object-cover rounded-lg mb-3 max-w-[200px]"
