@@ -5,6 +5,7 @@ export async function GET(request) {
     const client = await clientPromise;
     const db = client.db("super-shop");
     const productsCollection = db.collection("products"); // ✅ collection, not collectons
+ 
     const products = await productsCollection.find({}).toArray();
 
     return Response.json(products, { status: 200 });

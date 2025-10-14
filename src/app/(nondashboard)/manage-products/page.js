@@ -50,7 +50,7 @@ const ManageProducts = () => {
     }
   };
 
-  if (!loading) {
+  if (loading) {
     return (
       <Container className="p-4 min-h-[60vh]">
         <h2 className="text-2xl font-semibold mb-6">Manage Products</h2>
