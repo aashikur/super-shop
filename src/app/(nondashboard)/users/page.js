@@ -2,6 +2,7 @@
 import Container from '@/app/components/Container';
 import axios from 'axios';
 import { useSession } from 'next-auth/react';
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 const GetUsers = () => {  
@@ -55,7 +56,9 @@ const GetUsers = () => {
                 <tr key={user._id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-3">
-                      <img 
+                      <Image
+                      width={40}
+                      height={40} 
                         src={user.photoURL} 
                         alt={user.name}
                         className="h-10 w-10 rounded-full object-cover"

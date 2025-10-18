@@ -10,6 +10,7 @@ import { useSession, signOut } from 'next-auth/react';
 import { BiLogOut } from 'react-icons/bi';
 import Image from 'next/image';
 import { assets } from '@/lib/assets';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
     const [Drop1, setDrop1] = React.useState(false);
@@ -20,6 +21,9 @@ const Navbar = () => {
     const dashboardRef = useRef(null);
 
     const { data: session, status } = useSession();
+
+    const pathName = usePathname();
+    console.log(pathName)
 
     
 
