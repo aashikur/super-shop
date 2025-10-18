@@ -59,7 +59,7 @@ const Navbar = () => {
                     <li> <Link href="/products">Products</Link></li>
                     <li><Link href="/about">About</Link></li>
                     <li><Link href="contact">Contact</Link></li>
-                    <li><Link href="cart">Cart</Link></li>
+                    <li><Link href="/orders">Cart</Link></li>
                     <li ref={manageRef} className='relative hidden md:block'>
                         <button className=' border flex items-center gap-1 border-gray-300 px-4 py-2 rounded-full text-xs'
                             onClick={() => setDrop1(!Drop1)}>Manage <MdKeyboardArrowDown />

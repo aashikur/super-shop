@@ -50,6 +50,7 @@ import banner from "@/assets/banner.jpg";
 import logo_v1 from "@/assets/logo-v1.png";
 import logo_v3 from "@/assets/logo-v3.png";
 import logo_v2 from "@/assets/logo-v2.png";
+import cover from "@/assets/cover.jpg";
 export const assets = {
   logo_v1,
   logo_v2,
@@ -102,7 +103,8 @@ export const assets = {
   product_details_page_apple_earphone_image3,
   product_details_page_apple_earphone_image4,
   product_details_page_apple_earphone_image5,
-  checkmark
+  checkmark,
+  cover,
 };
 
 export const BagIcon = () => {
