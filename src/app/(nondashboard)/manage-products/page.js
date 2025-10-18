@@ -5,6 +5,7 @@ import { useSession } from "next-auth/react";
 import Container from "@/app/components/Container";
 import Swal from "sweetalert2";
 import Image from "next/image";
+import Loading from "@/app/components/Loading";
 
 const ManageProducts = () => {
   const { data: session } = useSession();
@@ -50,22 +51,35 @@ const ManageProducts = () => {
     }
   };
 
-  if (loading) {
-    return (
-      <Container className="p-4 min-h-[60vh]">
-        <h2 className="text-2xl font-semibold mb-6">Manage Products</h2>
-        {[...Array(3)].map((_, index) => (
-          <div key={index} className="skeleton mb-5  animate-pulse border min-h-60 border-gray-300 rounded-lg p-8 flex flex-col sm:flex-row  items-center justify-between shadow-sm hover:shadow-md transition" >
-            <p className="text-gray-500">Loading products...</p>
-          </div>
-        ))
-        }
+  // if (loading) {
+  //   return (
+  //     <Container className="p-4 min-h-[60vh]">
+  //       <h2 className="text-2xl font-semibold mb-6">Manage Products</h2>
+  //       {[...Array(3)].map((_, index) => (
+  //         <div key={index} className="skeleton mb-5  animate-pulse border min-h-60 border-gray-300 rounded-lg p-8 flex flex-col sm:flex-row  items-center justify-between shadow-sm hover:shadow-md transition" >
+  //           <p className="text-gray-500">Loading products...</p>
+  //         </div>
+  //       ))
+  //       }
 
 
+  //     </Container>
+  //   );
+  // }
+
+  if(loading) {
+    return(
+      
+     <>
+         <Container className="p-4">
+      <h2 className="text-2xl font-semibold mb-6">Manage Products</h2>
       </Container>
-    );
+     
+      <Loading/>
+     </>
+    
+    )
   }
-
   return (
     <Container className="p-4">
       <h2 className="text-2xl font-semibold mb-6">Manage Products</h2>

@@ -16,7 +16,7 @@ const DropdownMenuDashboard = () => {
             <ul className='flex flex-col w-full'>
                 <Link href="/profile" className='px-4 py-2 hover:bg-gray-100'>Profile</Link>
                 <Link href="/orders" className='px-4 py-2 hover:bg-gray-100'>Orders</Link>
-                <Link href="/Settings" className='px-4 py-2 hover:bg-gray-100'>Settings</Link>
+                {/* <Link href="/Settings" className='px-4 py-2 hover:bg-gray-100'>Settings</Link> */}
 
             </ul>
         </div>

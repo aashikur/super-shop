@@ -1,5 +1,6 @@
 "use client";
 import Container from '@/app/components/Container';
+import Loading from '@/app/components/Loading';
 import axios from 'axios';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
@@ -27,11 +28,7 @@ const GetUsers = () => {
 
   if (loading) {
     return (
-      <Container>
-        <div className="min-h-[60vh] flex items-center justify-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-        </div>
-      </Container>
+      <Loading/>
     );
   }
 

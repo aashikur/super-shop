@@ -82,9 +82,9 @@ const MobileMenu = ({ setDrop3 }) => {
                                 <Link onClick={() => {setDrop3(!Drop3)}} href="/orders" className="block px-6 py-2 text-sm hover:bg-gray-100">
                                     Orders
                                 </Link>
-                                <Link onClick={() => {setDrop3(!Drop3)}} href="/settings" className="block px-6 py-2 text-sm hover:bg-gray-100">
+                                {/* <Link onClick={() => {setDrop3(!Drop3)}} href="/settings" className="block px-6 py-2 text-sm hover:bg-gray-100">
                                     Settings
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                     </ul>
