@@ -43,7 +43,9 @@ const Checkout = () => {
                                 </div>
                             </form>
                         </div>
-
+<div>
+    sss
+</div>
                         {/* Payment Information */}
                         <div className="bg-white p-6 rounded-lg border border-gray-100">
                             <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
